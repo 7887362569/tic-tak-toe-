@@ -1,0 +1,93 @@
+body {  
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#board {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 375px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+}
+
+.square {
+    width: 100%;
+    padding-top: 100%; /* Maintain a square aspect ratio */
+    position: relative;
+    border: 1px solid #D3D3D3;
+    background-color:aqua;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.square:hover {
+    background-color: #FFFFE0;
+}
+
+.square > span {
+    position: absolute;
+}
+
+#restartButton {
+    display: block;
+    margin: 20px auto;
+    height: 40px;
+    width: 150px;
+    background-color: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 40px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#restartButton:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .square {
+        font-size: 1.5rem;
+    }
+
+    #restartButton {
+        width: 130px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .square {
+        font-size: 1.2rem;
+    }
+
+    #restartButton {
+        width: 120px;
+        font-size: 14px;
+    }
+}
